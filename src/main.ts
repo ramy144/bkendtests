@@ -13,8 +13,6 @@ async function bootstrap() {
 
   const reflector = app.get(Reflector)
 
-  app.useStaticAssets(path.join(__dirname, process.env.UPLOADS_BASE_PATH, process.env.UPLOADS_DIR_NAME), { prefix: '/uploads' });
-
   app.useGlobalPipes(new DefaultValidationPipe());
 
   app.useGlobalFilters(new AllExceptionsFilter());
